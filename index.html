@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOTAL PLUS</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Pretendard, Arial, sans-serif;
+background:#000;
+color:white;
+}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:25px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+background:rgba(0,0,0,.45);
+backdrop-filter:blur(10px);
+}
+
+.logo img{
+height:48px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+margin-left:40px;
+font-size:14px;
+font-weight:600;
+letter-spacing:1px;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(
+rgba(0,0,0,.55),
+rgba(0,0,0,.55)
+),
+url('hero.png');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:0 8%;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero h1{
+font-size:82px;
+line-height:1;
+margin-bottom:24px;
+font-weight:800;
+}
+
+.hero p{
+font-size:24px;
+color:#ddd;
+margin-bottom:40px;
+}
+
+.btns{
+display:flex;
+gap:15px;
+}
+
+.btn{
+padding:16px 30px;
+text-decoration:none;
+font-weight:700;
+border-radius:4px;
+}
+
+.btn-primary{
+background:white;
+color:black;
+}
+
+.btn-outline{
+border:1px solid white;
+color:white;
+}
+
+section{
+padding:120px 8%;
+}
+
+.section-title{
+font-size:54px;
+margin-bottom:20px;
+}
+
+.section-desc{
+font-size:20px;
+color:#bbb;
+max-width:900px;
+line-height:1.7;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:60px;
+}
+
+.card{
+background:#111;
+padding:35px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.card h3{
+font-size:26px;
+margin-bottom:15px;
+}
+
+.card p{
+color:#aaa;
+line-height:1.6;
+}
+
+footer{
+padding:60px;
+border-top:1px solid rgba(255,255,255,.1);
+text-align:center;
+color:#777;
+}
+</style>
+
+</head>
+<body>
+
+<nav>
+
+<div class="logo">
+<img src="logo-white.png">
+</div>
+
+<div class="menu">
+<a href="#">HOME</a>
+<a href="#">ABOUT</a>
+<a href="#">SOLUTIONS</a>
+<a href="#">EQUIPMENT</a>
+<a href="#">CONTACT</a>
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Professional<br>Lighting Solutions</h1>
+
+<p>
+무대조명 장비 수입 · 공급 · 설치 · 기술지원
+</p>
+
+<div class="btns">
+<a href="#" class="btn btn-primary">OUR SOLUTIONS</a>
+<a href="#" class="btn btn-outline">CONTACT US</a>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+About Total Plus
+</h2>
+
+<p class="section-desc">
+토탈플러스는 극장, 공연장, 문화예술공간을 위한
+전문 조명 솔루션 기업입니다.
+장비 수입부터 공급, 설치, 기술지원까지
+조명 시스템 구축의 전 과정을 수행합니다.
+</p>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Solutions
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Import</h3>
+<p>세계적인 무대조명 장비 수입</p>
+</div>
+
+<div class="card">
+<h3>Supply</h3>
+<p>조명기기 공급 및 구축</p>
+</div>
+
+<div class="card">
+<h3>Installation</h3>
+<p>전문 설치 및 시공</p>
+</div>
+
+<div class="card">
+<h3>Technical Support</h3>
+<p>기술지원 및 유지보수</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+TOTAL PLUS © 2026
+
+</footer>
+
+</body>
+</html>
