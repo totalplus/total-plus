@@ -6,235 +6,205 @@
 <title>TOTAL PLUS</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:Pretendard, Arial, sans-serif;
-background:#000;
-color:white;
-}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Pretendard, Arial, sans-serif;background:#000;color:white}
+a{text-decoration:none;color:inherit}
 
 nav{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:25px 60px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:1000;
-background:rgba(0,0,0,.45);
-backdrop-filter:blur(10px);
+position:fixed;top:0;left:0;width:100%;
+padding:24px 56px;
+display:flex;justify-content:space-between;align-items:center;
+z-index:1000;background:rgba(0,0,0,.42);backdrop-filter:blur(10px);
 }
-
-.logo img{
-height:48px;
-}
-
-.menu a{
-color:white;
-text-decoration:none;
-margin-left:40px;
-font-size:14px;
-font-weight:600;
-letter-spacing:1px;
-}
+.logo img{height:42px}
+.menu a{margin-left:38px;font-size:14px;font-weight:800;letter-spacing:1px}
+.menu a:hover{color:#78aaff}
 
 .hero{
 height:100vh;
 background:
-linear-gradient(
-rgba(0,0,0,.55),
-rgba(0,0,0,.55)
-),
-url('hero.png');
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-padding:0 8%;
+linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.56) 45%,rgba(0,0,0,.25) 100%),
+linear-gradient(180deg,rgba(0,0,0,.2) 0%,rgba(0,0,0,.75) 100%),
+url('hero.png') center/cover no-repeat;
+display:flex;align-items:center;padding:0 7%;
 }
+.hero-content{max-width:920px}
+.hero h1{font-size:72px;line-height:1.04;margin-bottom:28px;font-weight:900;letter-spacing:-3px}
+.hero p{font-size:24px;color:#eee;margin-bottom:42px;line-height:1.55}
+.btns{display:flex;gap:16px}
+.btn{padding:17px 31px;font-weight:900;border-radius:4px;font-size:15px}
+.btn-primary{background:#fff;color:#000}
+.btn-outline{border:1px solid rgba(255,255,255,.8);color:#fff}
+.btn:hover{background:#173e9c;color:#fff;border-color:#173e9c}
 
-.hero-content{
-max-width:900px;
+section{padding:120px 7%}
+.section-kicker{color:#78aaff;font-weight:900;letter-spacing:2px;font-size:13px;margin-bottom:22px}
+.section-title{font-size:54px;line-height:1.15;letter-spacing:-2px;margin-bottom:26px}
+.section-desc{font-size:20px;color:#bbb;max-width:920px;line-height:1.75}
+
+.about{
+background:#050505;
+border-top:1px solid rgba(255,255,255,.08);
 }
-
-.hero h1{
-font-size:82px;
-line-height:1;
-margin-bottom:24px;
-font-weight:800;
+.stats{
+display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:64px;
 }
+.stat{border-top:1px solid rgba(255,255,255,.18);padding-top:26px}
+.stat strong{font-size:54px;display:block}
+.stat span{color:#aaa;font-size:16px}
 
-.hero p{
-font-size:24px;
-color:#ddd;
-margin-bottom:40px;
-}
-
-.btns{
-display:flex;
-gap:15px;
-}
-
-.btn{
-padding:16px 30px;
-text-decoration:none;
-font-weight:700;
-border-radius:4px;
-}
-
-.btn-primary{
-background:white;
-color:black;
-}
-
-.btn-outline{
-border:1px solid white;
-color:white;
-}
-
-section{
-padding:120px 8%;
-}
-
-.section-title{
-font-size:54px;
-margin-bottom:20px;
-}
-
-.section-desc{
-font-size:20px;
-color:#bbb;
-max-width:900px;
-line-height:1.7;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:60px;
-}
-
+.solutions{background:#fff;color:#111}
+.solutions .section-kicker{color:#173e9c}
+.solutions .section-desc{color:#555}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin-top:58px}
 .card{
-background:#111;
-padding:35px;
-border:1px solid rgba(255,255,255,.08);
+background:#f5f5f5;padding:36px;min-height:230px;border:1px solid #e6e6e6;
+transition:.25s;
 }
+.card:hover{transform:translateY(-5px);border-color:#173e9c}
+.card h3{font-size:28px;margin-bottom:16px}
+.card p{color:#555;line-height:1.65;font-size:16px}
 
-.card h3{
-font-size:26px;
-margin-bottom:15px;
+.equipment{background:#0b0b0b}
+.equipment-list{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:58px;
 }
-
-.card p{
-color:#aaa;
-line-height:1.6;
+.equipment-item{
+border:1px solid rgba(255,255,255,.12);padding:28px;background:#111;
 }
+.equipment-item strong{display:block;font-size:22px;margin-bottom:10px}
+.equipment-item span{color:#999;line-height:1.5}
 
-footer{
-padding:60px;
-border-top:1px solid rgba(255,255,255,.1);
-text-align:center;
-color:#777;
+.contact{background:#fff;color:#111}
+.contact .section-kicker{color:#173e9c}
+.contact-box{
+margin-top:46px;display:grid;grid-template-columns:1fr 1fr;gap:24px;
+}
+.contact-card{border:1px solid #ddd;padding:34px;background:#fafafa}
+.contact-card h3{font-size:24px;margin-bottom:15px}
+.contact-card p{color:#555;line-height:1.8}
+footer{padding:50px 7%;background:#000;color:#777;border-top:1px solid rgba(255,255,255,.1)}
+
+@media(max-width:900px){
+nav{padding:20px 24px;display:block}
+.logo img{height:34px}
+.menu{margin-top:18px;display:flex;flex-wrap:wrap;gap:16px}
+.menu a{margin-left:0;font-size:12px}
+.hero{padding:0 24px}
+.hero h1{font-size:52px}
+.hero p{font-size:19px}
+.btns{display:block}
+.btn{display:inline-block;margin:0 8px 10px 0}
+section{padding:80px 24px}
+.section-title{font-size:38px}
+.stats{grid-template-columns:1fr}
+.contact-box{grid-template-columns:1fr}
 }
 </style>
-
 </head>
+
 <body>
 
 <nav>
-
-<div class="logo">
-<img src="logo-white.png">
-</div>
-
-<div class="menu">
-<a href="#">HOME</a>
-<a href="#">ABOUT</a>
-<a href="#">SOLUTIONS</a>
-<a href="#">EQUIPMENT</a>
-<a href="#">CONTACT</a>
-</div>
-
+  <a class="logo" href="#home"><img src="logo-white.png" alt="TOTAL PLUS"></a>
+  <div class="menu">
+    <a href="#home">HOME</a>
+    <a href="#about">회사소개</a>
+    <a href="#solutions">사업분야</a>
+    <a href="#equipment">장비소개</a>
+    <a href="#contact">문의하기</a>
+  </div>
 </nav>
 
-<section class="hero">
-
-<div class="hero-content">
-
-<h1>Professional<br>Lighting Solutions</h1>
-
-<p>
-무대조명 장비 수입 · 공급 · 설치 · 기술지원
-</p>
-
-<div class="btns">
-<a href="#" class="btn btn-primary">OUR SOLUTIONS</a>
-<a href="#" class="btn btn-outline">CONTACT US</a>
-</div>
-
-</div>
-
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Professional<br>Lighting Solutions</h1>
+    <p>공연장 · 극장 · 문화예술공간 전문 조명 솔루션</p>
+    <div class="btns">
+      <a href="#solutions" class="btn btn-primary">사업분야 보기</a>
+      <a href="#contact" class="btn btn-outline">문의하기</a>
+    </div>
+  </div>
 </section>
 
-<section>
+<section class="about" id="about">
+  <div class="section-kicker">ABOUT TOTAL PLUS</div>
+  <h2 class="section-title">조명 장비를 넘어, 공간의 경험을 설계합니다.</h2>
+  <p class="section-desc">
+    토탈플러스는 무대조명 장비의 수입, 공급, 설치, 기술지원을 수행하는 전문기업입니다.
+    극장, 공연장, 문화예술공간을 비롯해 다양한 공간에 필요한 조명 시스템 구축을 함께합니다.
+  </p>
 
-<h2 class="section-title">
-About Total Plus
-</h2>
-
-<p class="section-desc">
-토탈플러스는 극장, 공연장, 문화예술공간을 위한
-전문 조명 솔루션 기업입니다.
-장비 수입부터 공급, 설치, 기술지원까지
-조명 시스템 구축의 전 과정을 수행합니다.
-</p>
-
+  <div class="stats">
+    <div class="stat"><strong>2018</strong><span>Established</span></div>
+    <div class="stat"><strong>24h</strong><span>Technical Support</span></div>
+    <div class="stat"><strong>B2B</strong><span>Professional Lighting Partner</span></div>
+  </div>
 </section>
 
-<section>
+<section class="solutions" id="solutions">
+  <div class="section-kicker">SOLUTIONS</div>
+  <h2 class="section-title">수입부터 설치, 기술지원까지.</h2>
+  <p class="section-desc">
+    토탈플러스는 조명 장비 단품 공급을 넘어, 현장 조건과 목적에 맞는 조명 솔루션을 제공합니다.
+  </p>
 
-<h2 class="section-title">
-Solutions
-</h2>
+  <div class="cards">
+    <div class="card"><h3>Import</h3><p>전문 무대조명 장비 및 관련 시스템 수입</p></div>
+    <div class="card"><h3>Supply</h3><p>극장, 공연장, 문화예술공간 조명 장비 공급</p></div>
+    <div class="card"><h3>Installation</h3><p>현장 환경에 맞춘 조명기기 설치 및 시스템 구축</p></div>
+    <div class="card"><h3>Technical Support</h3><p>장비 운용, 유지보수, A/S 및 기술지원</p></div>
+    <div class="card"><h3>Rental</h3><p>공연 및 행사에 필요한 조명 장비 렌탈</p></div>
+    <div class="card"><h3>Consulting</h3><p>프로젝트 목적에 맞춘 조명 장비 구성 제안</p></div>
+  </div>
+</section>
 
-<div class="cards">
+<section class="equipment" id="equipment">
+  <div class="section-kicker">EQUIPMENT</div>
+  <h2 class="section-title">공간에 맞는 전문 장비를 제안합니다.</h2>
+  <p class="section-desc">
+    공연장, 극장, 방송, 문화예술공간에 필요한 다양한 조명 장비와 시스템을 취급합니다.
+  </p>
 
-<div class="card">
-<h3>Import</h3>
-<p>세계적인 무대조명 장비 수입</p>
-</div>
+  <div class="equipment-list">
+    <div class="equipment-item"><strong>Moving Lights</strong><span>Profile · Wash · Beam</span></div>
+    <div class="equipment-item"><strong>Lighting Consoles</strong><span>Control system and accessories</span></div>
+    <div class="equipment-item"><strong>Dimmer Systems</strong><span>Rack · Module · Power control</span></div>
+    <div class="equipment-item"><strong>Follow Spots</strong><span>Theater and performance venue operation</span></div>
+    <div class="equipment-item"><strong>Hazer & Fog</strong><span>Stage effect and atmosphere equipment</span></div>
+    <div class="equipment-item"><strong>Accessories</strong><span>Lens · Clamp · Case · Cable · Consumables</span></div>
+  </div>
+</section>
 
-<div class="card">
-<h3>Supply</h3>
-<p>조명기기 공급 및 구축</p>
-</div>
+<section class="contact" id="contact">
+  <div class="section-kicker">CONTACT</div>
+  <h2 class="section-title">프로젝트 문의</h2>
+  <p class="section-desc">
+    공연장, 극장, 문화예술공간 조명 장비 공급 및 설치 문의를 남겨주세요.
+  </p>
 
-<div class="card">
-<h3>Installation</h3>
-<p>전문 설치 및 시공</p>
-</div>
-
-<div class="card">
-<h3>Technical Support</h3>
-<p>기술지원 및 유지보수</p>
-</div>
-
-</div>
-
+  <div class="contact-box">
+    <div class="contact-card">
+      <h3>TOTAL PLUS</h3>
+      <p>
+        무대조명 장비 수입 · 공급 · 설치 · 기술지원<br>
+        극장 · 공연장 · 문화예술공간 전문 조명 솔루션
+      </p>
+    </div>
+    <div class="contact-card">
+      <h3>Inquiry</h3>
+      <p>
+        Email: 입력 필요<br>
+        Tel: 입력 필요<br>
+        Address: 입력 필요
+      </p>
+    </div>
+  </div>
 </section>
 
 <footer>
-
-TOTAL PLUS © 2026
-
+  TOTAL PLUS © 2026. Professional Lighting Solutions.
 </footer>
 
 </body>
