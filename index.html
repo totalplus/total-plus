@@ -4,133 +4,57 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TOTAL PLUS</title>
-
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:Pretendard, Arial, sans-serif;background:#000;color:white}
+body{font-family:Pretendard,Arial,sans-serif;background:#000;color:#fff}
 a{text-decoration:none;color:inherit}
 
-nav{
-position:fixed;top:0;left:0;width:100%;
-padding:22px 56px;
-display:flex;justify-content:space-between;align-items:center;
-z-index:1000;background:rgba(0,0,0,.36);backdrop-filter:blur(12px);
-border-bottom:1px solid rgba(255,255,255,.06);
-}
+nav{position:fixed;top:0;left:0;width:100%;padding:22px 56px;display:flex;justify-content:space-between;align-items:center;z-index:1000;background:rgba(0,0,0,.25);backdrop-filter:blur(10px)}
 .logo img{height:50px}
-.menu a{
-margin-left:48px;
-font-size:15px;
-font-weight:500;
-letter-spacing:.4px;
-color:rgba(255,255,255,.86);
-transition:.2s;
-}
+.menu a{margin-left:48px;font-size:15px;font-weight:500;color:rgba(255,255,255,.88)}
 .menu a:hover{color:#fff}
 
-.hero{
-height:100vh;
-background:
-linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.56) 45%,rgba(0,0,0,.25) 100%),
-linear-gradient(180deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,.75) 100%),
-url('hero.png') center/cover no-repeat;
-display:flex;align-items:center;padding:0 7%;
-}
+.hero{height:100vh;background:linear-gradient(90deg,rgba(0,0,0,.40) 0%,rgba(0,0,0,.15) 45%,rgba(0,0,0,.05) 100%),linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,.25) 100%),url('hero.png') center center/cover no-repeat;display:flex;align-items:center;padding:0 7%}
 .hero-content{max-width:920px}
 .hero h1{font-size:78px;line-height:1.04;margin-bottom:28px;font-weight:900;letter-spacing:-3px}
-.hero p{font-size:24px;color:#eee;margin-bottom:42px;line-height:1.55}
+.hero p{font-size:24px;color:#f3f3f3;margin-bottom:42px}
 .btns{display:flex;gap:16px}
 .btn{padding:17px 31px;font-weight:800;border-radius:10px;font-size:15px}
 .btn-primary{background:#fff;color:#000}
 .btn-outline{border:1px solid rgba(255,255,255,.8);color:#fff}
-.btn:hover{background:#173e9c;color:#fff;border-color:#173e9c}
 
 section{padding:120px 7%}
 .section-kicker{color:#78aaff;font-weight:800;letter-spacing:2px;font-size:13px;margin-bottom:22px}
 .section-title{font-size:54px;line-height:1.15;letter-spacing:-2px;margin-bottom:26px}
 .section-desc{font-size:20px;color:#bbb;max-width:920px;line-height:1.75}
 
-.about{
-background:#050505;
-border-top:1px solid rgba(255,255,255,.08);
-}
-.about-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:70px;
-align-items:start;
-}
-.about-text p{
-font-size:20px;
-color:#bbb;
-line-height:1.75;
-}
-.stats{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:24px;
-margin-top:70px;
-}
+.about{background:#050505}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:70px}
 .stat{border-top:1px solid rgba(255,255,255,.18);padding-top:26px}
 .stat strong{font-size:54px;display:block}
-.stat span{color:#aaa;font-size:16px}
+.stat span{color:#aaa}
 
-.projects-strip{
-margin-top:70px;
-padding-top:34px;
-border-top:1px solid rgba(255,255,255,.12);
-}
-.projects-strip h3{
-font-size:14px;
-letter-spacing:2px;
-color:#78aaff;
-margin-bottom:26px;
-}
-.project-names{
-display:flex;
-flex-wrap:wrap;
-gap:18px 34px;
-color:#ddd;
-font-size:18px;
-}
-.project-names span{
-opacity:.9;
-}
+.projects-strip{margin-top:70px;padding-top:34px;border-top:1px solid rgba(255,255,255,.12)}
+.project-names{display:flex;flex-wrap:wrap;gap:18px 34px;margin-top:20px;color:#ddd}
 
 .solutions{background:#fff;color:#111}
-.solutions .section-kicker{color:#173e9c}
-.solutions .section-desc{color:#555}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin-top:58px}
-.card{
-background:#f5f5f5;padding:36px;min-height:230px;border:1px solid #e6e6e6;
-transition:.25s;
-}
-.card:hover{transform:translateY(-5px);border-color:#173e9c}
-.card h3{font-size:28px;margin-bottom:16px}
-.card p{color:#555;line-height:1.65;font-size:16px}
+.card{background:#f5f5f5;padding:36px;border:1px solid #e6e6e6}
+.card p{color:#555;margin-top:12px;line-height:1.6}
 
 .equipment{background:#0b0b0b}
-.equipment-list{
-display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:58px;
-}
-.equipment-item{
-border:1px solid rgba(255,255,255,.12);padding:28px;background:#111;
-}
+.equipment-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:58px}
+.equipment-item{border:1px solid rgba(255,255,255,.12);padding:28px;background:#111}
 .equipment-item strong{display:block;font-size:22px;margin-bottom:10px}
-.equipment-item span{color:#999;line-height:1.5}
+.equipment-item span{color:#999}
 
 .contact{background:#fff;color:#111}
-.contact .section-kicker{color:#173e9c}
-.contact .section-desc{color:#555}
-.contact-box{
-margin-top:46px;display:grid;grid-template-columns:1fr 1fr;gap:24px;
-}
+.contact-box{margin-top:46px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .contact-card{border:1px solid #ddd;padding:34px;background:#fafafa}
-.contact-card h3{font-size:24px;margin-bottom:15px}
 .contact-card p{color:#555;line-height:1.8}
 
-footer{padding:50px 7%;background:#000;color:#777;border-top:1px solid rgba(255,255,255,.1)}
+footer{padding:50px 7%;background:#000;color:#777;text-align:center}
 
 @media(max-width:900px){
 nav{padding:20px 24px;display:block}
@@ -144,7 +68,6 @@ nav{padding:20px 24px;display:block}
 .btn{display:inline-block;margin:0 8px 10px 0}
 section{padding:80px 24px}
 .section-title{font-size:38px}
-.about-grid{grid-template-columns:1fr;gap:32px}
 .stats{grid-template-columns:1fr}
 .contact-box{grid-template-columns:1fr}
 }
@@ -176,28 +99,21 @@ section{padding:80px 24px}
 </section>
 
 <section class="about" id="about">
-  <div class="about-grid">
-    <div>
-      <div class="section-kicker">ABOUT TOTAL PLUS</div>
-      <h2 class="section-title">조명 장비를 넘어,<br>공간의 경험을 설계합니다.</h2>
-    </div>
-
-    <div class="about-text">
-      <p>
-        토탈플러스는 무대조명 장비의 수입, 공급, 설치, 기술지원을 수행하는 전문기업입니다.
-        극장, 공연장, 문화예술공간을 비롯해 다양한 공간에 필요한 조명 시스템 구축을 함께합니다.
-      </p>
-    </div>
-  </div>
+  <div class="section-kicker">ABOUT TOTAL PLUS</div>
+  <h2 class="section-title">조명 장비를 넘어,<br>공간의 경험을 설계합니다.</h2>
+  <p class="section-desc">
+    토탈플러스는 무대조명 장비의 수입, 공급, 설치, 기술지원을 수행하는 전문기업입니다.
+    극장, 공연장, 문화예술공간을 비롯해 다양한 공간에 필요한 조명 시스템 구축을 함께합니다.
+  </p>
 
   <div class="stats">
     <div class="stat"><strong>2018</strong><span>Established</span></div>
-    <div class="stat"><strong>24h</strong><span>Technical Support</span></div>
+    <div class="stat"><strong>24H</strong><span>Technical Support</span></div>
     <div class="stat"><strong>B2B</strong><span>Professional Lighting Partner</span></div>
   </div>
 
   <div class="projects-strip">
-    <h3>SELECTED REFERENCES</h3>
+    <strong>SELECTED REFERENCES</strong>
     <div class="project-names">
       <span>Moulin Rouge</span>
       <span>Mamma Mia</span>
@@ -211,67 +127,45 @@ section{padding:80px 24px}
 </section>
 
 <section class="solutions" id="solutions">
-  <div class="section-kicker">SOLUTIONS</div>
-  <h2 class="section-title">수입부터 설치, 기술지원까지.</h2>
-  <p class="section-desc">
-    토탈플러스는 조명 장비 단품 공급을 넘어, 현장 조건과 목적에 맞는 조명 솔루션을 제공합니다.
-  </p>
-
+  <h2 class="section-title">사업분야</h2>
   <div class="cards">
-    <div class="card"><h3>Import</h3><p>전문 무대조명 장비 및 관련 시스템 수입</p></div>
-    <div class="card"><h3>Supply</h3><p>극장, 공연장, 문화예술공간 조명 장비 공급</p></div>
-    <div class="card"><h3>Installation</h3><p>현장 환경에 맞춘 조명기기 설치 및 시스템 구축</p></div>
-    <div class="card"><h3>Technical Support</h3><p>장비 운용, 유지보수, A/S 및 기술지원</p></div>
-    <div class="card"><h3>Rental</h3><p>공연 및 행사에 필요한 조명 장비 렌탈</p></div>
-    <div class="card"><h3>Consulting</h3><p>프로젝트 목적에 맞춘 조명 장비 구성 제안</p></div>
+    <div class="card"><h3>Import</h3><p>전문 무대조명 장비 수입</p></div>
+    <div class="card"><h3>Supply</h3><p>극장 · 공연장 조명 장비 공급</p></div>
+    <div class="card"><h3>Installation</h3><p>설치 및 시공</p></div>
+    <div class="card"><h3>Technical Support</h3><p>유지보수 및 기술지원</p></div>
   </div>
 </section>
 
 <section class="equipment" id="equipment">
-  <div class="section-kicker">EQUIPMENT</div>
-  <h2 class="section-title">공간에 맞는 전문 장비를 제안합니다.</h2>
-  <p class="section-desc">
-    공연장, 극장, 방송, 문화예술공간에 필요한 다양한 조명 장비와 시스템을 취급합니다.
-  </p>
-
+  <h2 class="section-title">장비소개</h2>
   <div class="equipment-list">
     <div class="equipment-item"><strong>Moving Lights</strong><span>Profile · Wash · Beam</span></div>
-    <div class="equipment-item"><strong>Lighting Consoles</strong><span>Control system and accessories</span></div>
-    <div class="equipment-item"><strong>Dimmer Systems</strong><span>Rack · Module · Power control</span></div>
-    <div class="equipment-item"><strong>Follow Spots</strong><span>Theater and performance venue operation</span></div>
-    <div class="equipment-item"><strong>Hazer & Fog</strong><span>Stage effect and atmosphere equipment</span></div>
-    <div class="equipment-item"><strong>Accessories</strong><span>Lens · Clamp · Case · Cable · Consumables</span></div>
+    <div class="equipment-item"><strong>Lighting Consoles</strong><span>Control Systems</span></div>
+    <div class="equipment-item"><strong>Dimmer Systems</strong><span>Power Control Systems</span></div>
+    <div class="equipment-item"><strong>Follow Spots</strong><span>Theater Applications</span></div>
   </div>
 </section>
 
 <section class="contact" id="contact">
-  <div class="section-kicker">CONTACT</div>
-  <h2 class="section-title">프로젝트 문의</h2>
-  <p class="section-desc">
-    공연장, 극장, 문화예술공간 조명 장비 공급 및 설치 문의를 남겨주세요.
-  </p>
-
+  <h2 class="section-title">문의하기</h2>
   <div class="contact-box">
     <div class="contact-card">
       <h3>TOTAL PLUS</h3>
-      <p>
-        무대조명 장비 수입 · 공급 · 설치 · 기술지원<br>
-        극장 · 공연장 · 문화예술공간 전문 조명 솔루션
-      </p>
+      <p>무대조명 장비 수입 · 공급 · 설치 · 기술지원</p>
     </div>
     <div class="contact-card">
-     <h3>Inquiry</h3>
-<p>
-Email: totalplus@total-plus.co.kr<br>
-Tel: 031-812-8088<br>
-Address: 경기도 고양시 일산동구 고봉로702번길 125-19
-</p>
+      <h3>Inquiry</h3>
+      <p>
+        Email : totalplus@total-plus.co.kr<br>
+        Tel : 031-812-8088<br>
+        Address : 경기도 고양시 일산동구 고봉로702번길 125-19
+      </p>
     </div>
   </div>
 </section>
 
 <footer>
-  TOTAL PLUS © 2026. Professional Lighting Solutions.
+TOTAL PLUS © 2026
 </footer>
 
 </body>
