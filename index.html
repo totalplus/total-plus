@@ -3,73 +3,477 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TOTAL PLUS</title>
+<title>TOTAL PLUS | Professional Lighting Solutions</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:Pretendard,Arial,sans-serif;background:#000;color:#fff}
-a{text-decoration:none;color:inherit}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-nav{position:fixed;top:0;left:0;width:100%;padding:22px 56px;display:flex;justify-content:space-between;align-items:center;z-index:1000;background:rgba(0,0,0,.25);backdrop-filter:blur(10px)}
-.logo img{height:50px}
-.menu a{margin-left:48px;font-size:15px;font-weight:500;color:rgba(255,255,255,.88)}
-.menu a:hover{color:#fff}
+html{
+  scroll-behavior:smooth;
+}
 
-.hero{height:100vh;background:linear-gradient(90deg,rgba(0,0,0,.40) 0%,rgba(0,0,0,.15) 45%,rgba(0,0,0,.05) 100%),linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,.25) 100%),url('hero.png') center center/cover no-repeat;display:flex;align-items:center;padding:0 7%}
-.hero-content{max-width:920px}
-.hero h1{font-size:78px;line-height:1.04;margin-bottom:28px;font-weight:900;letter-spacing:-3px}
-.hero p{font-size:24px;color:#f3f3f3;margin-bottom:42px}
-.btns{display:flex;gap:16px}
-.btn{padding:17px 31px;font-weight:800;border-radius:10px;font-size:15px}
-.btn-primary{background:#fff;color:#000}
-.btn-outline{border:1px solid rgba(255,255,255,.8);color:#fff}
+body{
+  font-family:Pretendard, Arial, sans-serif;
+  background:#000;
+  color:#fff;
+}
 
-section{padding:120px 7%}
-.section-kicker{color:#78aaff;font-weight:800;letter-spacing:2px;font-size:13px;margin-bottom:22px}
-.section-title{font-size:54px;line-height:1.15;letter-spacing:-2px;margin-bottom:26px}
-.section-desc{font-size:20px;color:#bbb;max-width:920px;line-height:1.75}
+a{
+  color:inherit;
+  text-decoration:none;
+}
 
-.about{background:#050505}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:70px}
-.stat{border-top:1px solid rgba(255,255,255,.18);padding-top:26px}
-.stat strong{font-size:54px;display:block}
-.stat span{color:#aaa}
+/* 상단 메뉴 */
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  padding:22px 56px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+  background:rgba(0,0,0,.27);
+  backdrop-filter:blur(11px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
 
-.projects-strip{margin-top:70px;padding-top:34px;border-top:1px solid rgba(255,255,255,.12)}
-.project-names{display:flex;flex-wrap:wrap;gap:18px 34px;margin-top:20px;color:#ddd}
+.logo img{
+  height:50px;
+  display:block;
+}
 
-.solutions{background:#fff;color:#111}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin-top:58px}
-.card{background:#f5f5f5;padding:36px;border:1px solid #e6e6e6}
-.card p{color:#555;margin-top:12px;line-height:1.6}
+.menu{
+  display:flex;
+  align-items:center;
+}
 
-.equipment{background:#0b0b0b}
-.equipment-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:58px}
-.equipment-item{border:1px solid rgba(255,255,255,.12);padding:28px;background:#111}
-.equipment-item strong{display:block;font-size:22px;margin-bottom:10px}
-.equipment-item span{color:#999}
+.menu a{
+  margin-left:48px;
+  font-size:15px;
+  font-weight:500;
+  letter-spacing:.3px;
+  color:rgba(255,255,255,.88);
+  transition:.2s;
+}
 
-.contact{background:#fff;color:#111}
-.contact-box{margin-top:46px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.contact-card{border:1px solid #ddd;padding:34px;background:#fafafa}
-.contact-card p{color:#555;line-height:1.8}
+.menu a:hover{
+  color:#78aaff;
+}
 
-footer{padding:50px 7%;background:#000;color:#777;text-align:center}
+/* 메인 */
+.hero{
+  height:100vh;
+  min-height:700px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.40) 0%,
+      rgba(0,0,0,.15) 48%,
+      rgba(0,0,0,.03) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.04) 0%,
+      rgba(0,0,0,.22) 100%
+    ),
+    url('hero.png') center center/cover no-repeat;
 
-@media(max-width:900px){
-nav{padding:20px 24px;display:block}
-.logo img{height:38px}
-.menu{margin-top:18px;display:flex;flex-wrap:wrap;gap:16px}
-.menu a{margin-left:0;font-size:13px}
-.hero{padding:0 24px}
-.hero h1{font-size:52px}
-.hero p{font-size:19px}
-.btns{display:block}
-.btn{display:inline-block;margin:0 8px 10px 0}
-section{padding:80px 24px}
-.section-title{font-size:38px}
-.stats{grid-template-columns:1fr}
-.contact-box{grid-template-columns:1fr}
+  display:flex;
+  align-items:center;
+  padding:0 7%;
+}
+
+.hero-content{
+  max-width:920px;
+}
+
+.hero h1{
+  font-size:78px;
+  line-height:1.04;
+  margin-bottom:28px;
+  font-weight:900;
+  letter-spacing:-3px;
+  text-shadow:0 3px 22px rgba(0,0,0,.45);
+}
+
+.hero p{
+  font-size:24px;
+  color:#f4f4f4;
+  margin-bottom:42px;
+  line-height:1.55;
+  text-shadow:0 2px 12px rgba(0,0,0,.65);
+}
+
+.btns{
+  display:flex;
+  gap:16px;
+}
+
+.btn{
+  display:inline-block;
+  padding:17px 31px;
+  font-size:15px;
+  font-weight:800;
+  border-radius:10px;
+  transition:.25s;
+}
+
+.btn-primary{
+  background:#fff;
+  color:#000;
+}
+
+.btn-outline{
+  border:1px solid rgba(255,255,255,.85);
+  color:#fff;
+  background:rgba(0,0,0,.12);
+}
+
+.btn:hover{
+  background:#173e9c;
+  color:#fff;
+  border-color:#173e9c;
+  transform:translateY(-2px);
+}
+
+/* 공통 섹션 */
+section{
+  padding:120px 7%;
+}
+
+.section-kicker{
+  color:#78aaff;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:2px;
+  margin-bottom:22px;
+}
+
+.section-title{
+  font-size:54px;
+  line-height:1.15;
+  letter-spacing:-2px;
+  margin-bottom:26px;
+}
+
+.section-desc{
+  max-width:920px;
+  font-size:20px;
+  color:#aaa;
+  line-height:1.75;
+}
+
+/* 회사소개 */
+.about{
+  background:#050505;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:start;
+}
+
+.about-text{
+  font-size:20px;
+  color:#bbb;
+  line-height:1.8;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin-top:70px;
+}
+
+.stat{
+  border-top:1px solid rgba(255,255,255,.18);
+  padding-top:26px;
+}
+
+.stat strong{
+  display:block;
+  font-size:50px;
+  margin-bottom:8px;
+}
+
+.stat span{
+  color:#aaa;
+  font-size:15px;
+}
+
+.projects-strip{
+  margin-top:70px;
+  padding-top:34px;
+  border-top:1px solid rgba(255,255,255,.12);
+}
+
+.projects-strip h3{
+  color:#78aaff;
+  font-size:13px;
+  letter-spacing:2px;
+  margin-bottom:25px;
+}
+
+.project-names{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px 34px;
+  color:#ddd;
+  font-size:18px;
+}
+
+/* 사업분야 */
+.solutions{
+  background:#fff;
+  color:#111;
+}
+
+.solutions .section-kicker{
+  color:#173e9c;
+}
+
+.solutions .section-desc{
+  color:#555;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+  margin-top:58px;
+}
+
+.card{
+  min-height:230px;
+  padding:36px;
+  background:#f5f5f5;
+  border:1px solid #e5e5e5;
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  border-color:#173e9c;
+}
+
+.card h3{
+  font-size:27px;
+  margin-bottom:18px;
+}
+
+.card p{
+  color:#555;
+  font-size:16px;
+  line-height:1.65;
+}
+
+/* 장비소개 */
+.equipment{
+  background:#0b0b0b;
+}
+
+.equipment .section-desc{
+  color:#aaa;
+}
+
+.equipment-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin-top:58px;
+}
+
+.equipment-card{
+  overflow:hidden;
+  background:#111;
+  border:1px solid rgba(255,255,255,.1);
+  transition:transform .25s, border-color .25s;
+}
+
+.equipment-card:hover{
+  transform:translateY(-7px);
+  border-color:#416ed8;
+}
+
+.equipment-image{
+  height:360px;
+  padding:28px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f7f7f7;
+}
+
+.equipment-image img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:contain;
+}
+
+.equipment-content{
+  padding:27px;
+}
+
+.equipment-category{
+  display:block;
+  margin-bottom:11px;
+  color:#78aaff;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.equipment-content h3{
+  margin-bottom:12px;
+  font-size:23px;
+  line-height:1.25;
+}
+
+.equipment-content p{
+  color:#999;
+  font-size:15px;
+  line-height:1.65;
+}
+
+/* 문의 */
+.contact{
+  background:#fff;
+  color:#111;
+}
+
+.contact .section-kicker{
+  color:#173e9c;
+}
+
+.contact .section-desc{
+  color:#555;
+}
+
+.contact-box{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  margin-top:46px;
+}
+
+.contact-card{
+  padding:36px;
+  background:#fafafa;
+  border:1px solid #ddd;
+}
+
+.contact-card h3{
+  margin-bottom:17px;
+  font-size:24px;
+}
+
+.contact-card p{
+  color:#555;
+  line-height:1.9;
+}
+
+.contact-card a{
+  color:#173e9c;
+}
+
+footer{
+  padding:50px 7%;
+  background:#000;
+  color:#777;
+  border-top:1px solid rgba(255,255,255,.1);
+}
+
+/* 모바일 */
+@media(max-width:1050px){
+  .cards{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .equipment-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:760px){
+  nav{
+    padding:18px 22px;
+    display:block;
+  }
+
+  .logo img{
+    height:37px;
+  }
+
+  .menu{
+    margin-top:16px;
+    gap:15px;
+    flex-wrap:wrap;
+  }
+
+  .menu a{
+    margin-left:0;
+    font-size:12px;
+  }
+
+  .hero{
+    min-height:700px;
+    padding:120px 24px 40px;
+    background-position:center;
+  }
+
+  .hero h1{
+    font-size:48px;
+    letter-spacing:-2px;
+  }
+
+  .hero p{
+    font-size:18px;
+  }
+
+  .btns{
+    display:block;
+  }
+
+  .btn{
+    margin:0 8px 10px 0;
+  }
+
+  section{
+    padding:80px 24px;
+  }
+
+  .section-title{
+    font-size:38px;
+  }
+
+  .section-desc,
+  .about-text{
+    font-size:17px;
+  }
+
+  .about-grid,
+  .stats,
+  .cards,
+  .equipment-grid,
+  .contact-box{
+    grid-template-columns:1fr;
+  }
+
+  .equipment-image{
+    height:330px;
+  }
 }
 </style>
 </head>
@@ -77,7 +481,10 @@ section{padding:80px 24px}
 <body>
 
 <nav>
-  <a class="logo" href="#home"><img src="logo-white.png" alt="TOTAL PLUS"></a>
+  <a class="logo" href="#home">
+    <img src="logo-white.png" alt="TOTAL PLUS">
+  </a>
+
   <div class="menu">
     <a href="#home">HOME</a>
     <a href="#about">회사소개</a>
@@ -90,7 +497,9 @@ section{padding:80px 24px}
 <section class="hero" id="home">
   <div class="hero-content">
     <h1>Professional<br>Lighting Solutions</h1>
+
     <p>극장 · 공연장 · 문화예술공간을 위한 전문 조명 시스템</p>
+
     <div class="btns">
       <a href="#solutions" class="btn btn-primary">사업분야 보기</a>
       <a href="#contact" class="btn btn-outline">문의하기</a>
@@ -99,21 +508,42 @@ section{padding:80px 24px}
 </section>
 
 <section class="about" id="about">
-  <div class="section-kicker">ABOUT TOTAL PLUS</div>
-  <h2 class="section-title">조명 장비를 넘어,<br>공간의 경험을 설계합니다.</h2>
-  <p class="section-desc">
-    토탈플러스는 무대조명 장비의 수입, 공급, 설치, 기술지원을 수행하는 전문기업입니다.
-    극장, 공연장, 문화예술공간을 비롯해 다양한 공간에 필요한 조명 시스템 구축을 함께합니다.
-  </p>
+  <div class="about-grid">
+    <div>
+      <div class="section-kicker">ABOUT TOTAL PLUS</div>
+
+      <h2 class="section-title">
+        조명 장비를 넘어,<br>
+        공간의 경험을 설계합니다.
+      </h2>
+    </div>
+
+    <div class="about-text">
+      토탈플러스는 무대조명 장비의 수입, 공급, 설치, 기술지원을 수행하는 전문기업입니다.
+      극장, 공연장, 문화예술공간을 비롯해 다양한 공간에 필요한 조명 시스템 구축을 함께합니다.
+    </div>
+  </div>
 
   <div class="stats">
-    <div class="stat"><strong>2018</strong><span>Established</span></div>
-    <div class="stat"><strong>24H</strong><span>Technical Support</span></div>
-    <div class="stat"><strong>B2B</strong><span>Professional Lighting Partner</span></div>
+    <div class="stat">
+      <strong>2018</strong>
+      <span>Established</span>
+    </div>
+
+    <div class="stat">
+      <strong>24H</strong>
+      <span>Technical Support</span>
+    </div>
+
+    <div class="stat">
+      <strong>B2B</strong>
+      <span>Professional Lighting Partner</span>
+    </div>
   </div>
 
   <div class="projects-strip">
-    <strong>SELECTED REFERENCES</strong>
+    <h3>SELECTED REFERENCES</h3>
+
     <div class="project-names">
       <span>Moulin Rouge</span>
       <span>Mamma Mia</span>
@@ -127,37 +557,146 @@ section{padding:80px 24px}
 </section>
 
 <section class="solutions" id="solutions">
-  <h2 class="section-title">사업분야</h2>
+  <div class="section-kicker">SOLUTIONS</div>
+
+  <h2 class="section-title">수입부터 설치, 기술지원까지.</h2>
+
+  <p class="section-desc">
+    토탈플러스는 조명 장비 단품 공급을 넘어 현장 조건과 목적에 맞는 전문 조명 솔루션을 제공합니다.
+  </p>
+
   <div class="cards">
-    <div class="card"><h3>Import</h3><p>전문 무대조명 장비 수입</p></div>
-    <div class="card"><h3>Supply</h3><p>극장 · 공연장 조명 장비 공급</p></div>
-    <div class="card"><h3>Installation</h3><p>설치 및 시공</p></div>
-    <div class="card"><h3>Technical Support</h3><p>유지보수 및 기술지원</p></div>
+    <div class="card">
+      <h3>Import</h3>
+      <p>전문 무대조명 장비와 관련 시스템 수입</p>
+    </div>
+
+    <div class="card">
+      <h3>Supply</h3>
+      <p>극장, 공연장, 문화예술공간의 조명 장비 공급</p>
+    </div>
+
+    <div class="card">
+      <h3>Installation</h3>
+      <p>현장 환경에 맞춘 조명기기 설치 및 시스템 구축</p>
+    </div>
+
+    <div class="card">
+      <h3>Technical Support</h3>
+      <p>장비 운용, 유지보수, A/S 및 기술지원</p>
+    </div>
   </div>
 </section>
 
 <section class="equipment" id="equipment">
+  <div class="section-kicker">EQUIPMENT</div>
+
   <h2 class="section-title">장비소개</h2>
-  <div class="equipment-list">
-    <div class="equipment-item"><strong>Moving Lights</strong><span>Profile · Wash · Beam</span></div>
-    <div class="equipment-item"><strong>Lighting Consoles</strong><span>Control Systems</span></div>
-    <div class="equipment-item"><strong>Dimmer Systems</strong><span>Power Control Systems</span></div>
-    <div class="equipment-item"><strong>Follow Spots</strong><span>Theater Applications</span></div>
+
+  <p class="section-desc">
+    극장과 공연장에 필요한 전문 조명 장비부터 제어 및 시스템 솔루션까지 제공합니다.
+  </p>
+
+  <div class="equipment-grid">
+
+    <article class="equipment-card">
+      <div class="equipment-image">
+        <img src="equipment_vlhive151.png" alt="VLHive 151 Digital FX">
+      </div>
+
+      <div class="equipment-content">
+        <span class="equipment-category">Moving Lights</span>
+        <h3>VLHive 151 Digital FX</h3>
+        <p>대형 공연과 라이브 이벤트를 위한 디지털 무빙라이트 솔루션</p>
+      </div>
+    </article>
+
+    <article class="equipment-card">
+      <div class="equipment-image">
+        <img src="equipment_vl2600_profile.jpg" alt="VL2600 Profile">
+      </div>
+
+      <div class="equipment-content">
+        <span class="equipment-category">Profile Fixtures</span>
+        <h3>VL2600 Profile</h3>
+        <p>극장과 공연장 환경에 적합한 정밀 프로파일 조명</p>
+      </div>
+    </article>
+
+    <article class="equipment-card">
+      <div class="equipment-image">
+        <img src="equipment_neox15.jpg" alt="NEO X15">
+      </div>
+
+      <div class="equipment-content">
+        <span class="equipment-category">Lighting Control</span>
+        <h3>NEO X15</h3>
+        <p>다양한 공연 환경에 대응하는 전문 조명 제어 콘솔</p>
+      </div>
+    </article>
+
+    <article class="equipment-card">
+      <div class="equipment-image">
+        <img src="equipment_rigrack_processor.png" alt="RigRack Processor">
+      </div>
+
+      <div class="equipment-content">
+        <span class="equipment-category">Power Systems</span>
+        <h3>RigRack Processor</h3>
+        <p>전원 시스템의 통합 제어와 안정적인 상태 관리를 위한 프로세서</p>
+      </div>
+    </article>
+
+    <article class="equipment-card">
+      <div class="equipment-image">
+        <img src="equipment_vl2600_upgradekit.png" alt="VL2600 SE Engine Upgrade Kit">
+      </div>
+
+      <div class="equipment-content">
+        <span class="equipment-category">Upgrade Solutions</span>
+        <h3>VL2600 SE Engine Upgrade Kit</h3>
+        <p>기존 장비의 성능과 효율을 향상시키는 엔진 업그레이드 솔루션</p>
+      </div>
+    </article>
+
   </div>
 </section>
 
 <section class="contact" id="contact">
-  <h2 class="section-title">문의하기</h2>
+  <div class="section-kicker">CONTACT</div>
+
+  <h2 class="section-title">프로젝트 문의</h2>
+
+  <p class="section-desc">
+    공연장, 극장, 문화예술공간의 조명 장비 공급 및 설치에 대해 문의해주세요.
+  </p>
+
   <div class="contact-box">
     <div class="contact-card">
       <h3>TOTAL PLUS</h3>
-      <p>무대조명 장비 수입 · 공급 · 설치 · 기술지원</p>
+
+      <p>
+        무대조명 장비 수입 · 공급 · 설치 · 기술지원<br>
+        극장 · 공연장 · 문화예술공간 전문 조명 솔루션
+      </p>
     </div>
+
     <div class="contact-card">
       <h3>Inquiry</h3>
+
       <p>
-        Email : totalplus@total-plus.co.kr<br>
-        Tel : 031-812-8088<br>
+        Email :
+        <a href="mailto:totalplus@total-plus.co.kr">
+          totalplus@total-plus.co.kr
+        </a>
+        <br>
+
+        Tel :
+        <a href="tel:0318128088">
+          031-812-8088
+        </a>
+        <br>
+
         Address : 경기도 고양시 일산동구 고봉로702번길 125-19
       </p>
     </div>
@@ -165,7 +704,7 @@ section{padding:80px 24px}
 </section>
 
 <footer>
-TOTAL PLUS © 2026
+  TOTAL PLUS © 2026. Professional Lighting Solutions.
 </footer>
 
 </body>
