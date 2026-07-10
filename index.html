@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -57,7 +56,7 @@ nav{
 }
 
 .menu a{
-  margin-left:42px;
+  margin-left:38px;
   font-size:15px;
   font-weight:500;
   letter-spacing:.3px;
@@ -74,7 +73,6 @@ nav{
 .hero{
   height:100vh;
   min-height:700px;
-
   background:
     linear-gradient(
       90deg,
@@ -264,7 +262,7 @@ section{
   line-height:1.65;
 }
 
-/* EQUIPMENT */
+/* FEATURED PRODUCTS */
 
 .equipment{
   background:
@@ -285,7 +283,7 @@ section{
 }
 
 .equipment-header .section-desc{
-  max-width:630px;
+  max-width:650px;
   font-size:18px;
 }
 
@@ -350,22 +348,13 @@ section{
   padding:28px 30px 32px;
 }
 
-.equipment-brand{
-  display:block;
-  margin-bottom:15px;
-  color:#78aaff;
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:2px;
-}
-
 .equipment-category{
   display:block;
-  margin-bottom:9px;
-  color:#777;
+  margin-bottom:11px;
+  color:#78aaff;
   font-size:12px;
-  font-weight:700;
-  letter-spacing:1.3px;
+  font-weight:800;
+  letter-spacing:1.5px;
   text-transform:uppercase;
 }
 
@@ -390,7 +379,8 @@ section{
   position:absolute;
   top:22px;
   right:24px;
-  color:rgba(0,0,0,.18);
+  z-index:2;
+  color:rgba(0,0,0,.20);
   font-size:13px;
   font-weight:800;
   letter-spacing:1px;
@@ -733,7 +723,7 @@ footer{
     <a href="#home">HOME</a>
     <a href="#about">회사소개</a>
     <a href="#solutions">사업분야</a>
-    <a href="#equipment">장비소개</a>
+    <a href="#equipment">대표제품</a>
     <a href="#projects">프로젝트</a>
     <a href="#contact">문의하기</a>
   </div>
@@ -836,38 +826,45 @@ footer{
 </section>
 
 <section class="equipment" id="equipment">
+
   <div class="equipment-header">
     <div>
       <div class="section-kicker">
-        EQUIPMENT
+        FEATURED PRODUCTS
       </div>
 
       <h2 class="section-title">
-        장비소개
+        대표 제품
       </h2>
     </div>
 
     <p class="section-desc">
-      극장과 공연장에 필요한 전문 조명 장비부터
-      제어 및 전원 시스템까지 제공합니다.
+      공연장과 문화예술공간에 필요한 조명, 제어, 전원 및
+      무대효과 장비를 프로젝트에 맞게 제안합니다.
     </p>
   </div>
 
   <div class="equipment-featured">
+
     <article class="equipment-card featured">
       <span class="equipment-number">01</span>
 
       <div class="equipment-image">
-        <img src="equipment_vlhive151.png" alt="VLHive 151 Digital FX">
+        <img
+          src="equipment_vlhive151.png"
+          alt="VLHive 151 Digital FX">
       </div>
 
       <div class="equipment-info">
-        <span class="equipment-brand">VARI-LITE</span>
-        <span class="equipment-category">Moving Lights</span>
+        <span class="equipment-category">
+          Lighting Fixtures
+        </span>
+
         <h3>VLHive 151 Digital FX</h3>
+
         <p>
-          디지털 기술을 기반으로 새로운 무대 표현을 구현하는
-          차세대 엔터테인먼트 조명.
+          디지털 기술을 기반으로 다양한 무대 표현을 구현하는
+          엔터테인먼트 조명.
         </p>
       </div>
     </article>
@@ -876,34 +873,48 @@ footer{
       <span class="equipment-number">02</span>
 
       <div class="equipment-image">
-        <img src="equipment_vl2600_profile.jpg" alt="VL2600 Profile">
+        <img
+          src="equipment_vl2600_profile.jpg"
+          alt="VL2600 Profile">
       </div>
 
       <div class="equipment-info">
-        <span class="equipment-brand">VARI-LITE</span>
-        <span class="equipment-category">Profile Fixtures</span>
+        <span class="equipment-category">
+          Lighting Fixtures
+        </span>
+
         <h3>VL2600 Profile</h3>
+
         <p>
           극장과 공연 환경에서 정밀한 빔 제어와
           안정적인 성능을 제공하는 프로파일 조명.
         </p>
       </div>
     </article>
+
   </div>
 
   <div class="equipment-secondary">
+
     <article class="equipment-card">
       <span class="equipment-number">03</span>
 
       <div class="equipment-image">
-        <img src="equipment_neox15.png" alt="NEO X15">
+        <img
+          src="equipment_neox15.png"
+          alt="NEO X15">
       </div>
 
       <div class="equipment-info">
-        <span class="equipment-brand">VARI-LITE</span>
-        <span class="equipment-category">Lighting Control</span>
+        <span class="equipment-category">
+          Lighting Control
+        </span>
+
         <h3>NEO X15</h3>
-        <p>공연 제작과 시스템 운용을 위한 전문 조명 제어 콘솔.</p>
+
+        <p>
+          공연 제작과 시스템 운용을 위한 전문 조명 제어 콘솔.
+        </p>
       </div>
     </article>
 
@@ -911,14 +922,21 @@ footer{
       <span class="equipment-number">04</span>
 
       <div class="equipment-image">
-        <img src="equipment_rigrack_processor.png" alt="RigRack Processor">
+        <img
+          src="equipment_rigrack_processor.png"
+          alt="RigRack Processor">
       </div>
 
       <div class="equipment-info">
-        <span class="equipment-brand">VARI-LITE</span>
-        <span class="equipment-category">Power Systems</span>
+        <span class="equipment-category">
+          Power Systems
+        </span>
+
         <h3>RigRack Processor</h3>
-        <p>전원 시스템을 통합 제어하고 안정적인 운용을 지원하는 프로세서.</p>
+
+        <p>
+          전원 시스템의 통합 제어와 안정적인 운용을 지원하는 프로세서.
+        </p>
       </div>
     </article>
 
@@ -926,20 +944,118 @@ footer{
       <span class="equipment-number">05</span>
 
       <div class="equipment-image">
-        <img src="equipment_vl2600_upgradekit.png" alt="VL2600 SE Engine Upgrade Kit">
+        <img
+          src="equipment_H-7_fog_machine.png"
+          alt="H-7 Fog Machine">
       </div>
 
       <div class="equipment-info">
-        <span class="equipment-brand">VARI-LITE</span>
-        <span class="equipment-category">Upgrade Solutions</span>
-        <h3>VL2600 SE Engine Upgrade Kit</h3>
-        <p>기존 장비의 성능과 효율을 향상시키는 엔진 업그레이드 솔루션.</p>
+        <span class="equipment-category">
+          Atmospheric Effects
+        </span>
+
+        <h3>H-7 Fog Machine</h3>
+
+        <p>
+          대형 공연과 무대 연출을 위한 고출력 포그머신.
+        </p>
       </div>
     </article>
+
+    <article class="equipment-card">
+      <span class="equipment-number">06</span>
+
+      <div class="equipment-image">
+        <img
+          src="equipment_G300_fog_machine.png"
+          alt="G300 II Fog Machine">
+      </div>
+
+      <div class="equipment-info">
+        <span class="equipment-category">
+          Atmospheric Effects
+        </span>
+
+        <h3>G300 II Fog Machine</h3>
+
+        <p>
+          공연장과 특수효과 현장을 위한 프로페셔널 포그머신.
+        </p>
+      </div>
+    </article>
+
+    <article class="equipment-card">
+      <span class="equipment-number">07</span>
+
+      <div class="equipment-image">
+        <img
+          src="equipment_DFZ660_haze_machine.png"
+          alt="DFZ660 Haze Machine">
+      </div>
+
+      <div class="equipment-info">
+        <span class="equipment-category">
+          Atmospheric Effects
+        </span>
+
+        <h3>DFZ660 Haze Machine</h3>
+
+        <p>
+          조명 빔을 균일하고 선명하게 표현하는 전문 헤이즈머신.
+        </p>
+      </div>
+    </article>
+
+    <article class="equipment-card">
+      <span class="equipment-number">08</span>
+
+      <div class="equipment-image">
+        <img
+          src="equipment_CAT2_fog_machine.png"
+          alt="CAT-2 Fog Machine">
+      </div>
+
+      <div class="equipment-info">
+        <span class="equipment-category">
+          Atmospheric Effects
+        </span>
+
+        <h3>CAT-2 Fog Machine</h3>
+
+        <p>
+          다양한 공연 환경에 대응하는 프로페셔널 무대효과 장비.
+        </p>
+      </div>
+    </article>
+
+    <article class="equipment-card">
+      <span class="equipment-number">09</span>
+
+      <div class="equipment-image">
+        <img
+          src="equipment_vl2600_upgradekit.png"
+          alt="VL2600 SE Engine Upgrade Kit">
+      </div>
+
+      <div class="equipment-info">
+        <span class="equipment-category">
+          Upgrade Solutions
+        </span>
+
+        <h3>VL2600 SE Engine Upgrade Kit</h3>
+
+        <p>
+          기존 장비의 성능과 효율을 향상시키는
+          엔진 업그레이드 솔루션.
+        </p>
+      </div>
+    </article>
+
   </div>
 </section>
 
 <section class="projects" id="projects">
+
   <div class="projects-header">
     <div>
       <div class="section-kicker">
@@ -952,55 +1068,82 @@ footer{
     </div>
 
     <p class="section-desc">
-      공연장과 문화예술공간에 전문 조명 장비와 시스템을 공급해왔습니다.
+      다양한 문화예술 현장에 전문 조명 시스템을 공급해왔습니다.
     </p>
   </div>
 
   <article class="project-featured">
-    <img src="project_moulin_rouge.png" alt="뮤지컬 물랑루즈">
+    <img
+      src="project_moulin_rouge.png"
+      alt="뮤지컬 물랑루즈">
 
     <div class="project-featured-content">
-      <span class="project-type">Musical</span>
+      <span class="project-type">
+        Musical
+      </span>
+
       <h3>Moulin Rouge</h3>
     </div>
   </article>
 
   <div class="project-grid">
+
     <article class="project-card">
-      <img src="project_mamma_mia.png" alt="뮤지컬 맘마미아">
+      <img
+        src="project_mamma_mia.png"
+        alt="뮤지컬 맘마미아">
 
       <div class="project-card-content">
-        <span class="project-type">Musical</span>
+        <span class="project-type">
+          Musical
+        </span>
+
         <h3>Mamma Mia!</h3>
       </div>
     </article>
 
     <article class="project-card">
-      <img src="project_betel_geuse.png" alt="뮤지컬 비틀쥬스">
+      <img
+        src="project_betel_geuse.png"
+        alt="뮤지컬 비틀쥬스">
 
       <div class="project-card-content">
-        <span class="project-type">Musical</span>
+        <span class="project-type">
+          Musical
+        </span>
+
         <h3>Beetlejuice</h3>
       </div>
     </article>
 
     <article class="project-card">
-      <img src="project_shinsegae_xscala.png" alt="신세계 엑스칼라 공연장">
+      <img
+        src="project_shinsegae_xscala.png"
+        alt="신세계 엑스칼라 공연장">
 
       <div class="project-card-content">
-        <span class="project-type">Performance Venue</span>
+        <span class="project-type">
+          Performance Venue
+        </span>
+
         <h3>Shinsegae X Scala</h3>
       </div>
     </article>
 
     <article class="project-card">
-      <img src="project_incheon_stadium.png" alt="인천 경기장 조명 프로젝트">
+      <img
+        src="project_incheon_stadium.png"
+        alt="인천 경기장 조명 프로젝트">
 
       <div class="project-card-content">
-        <span class="project-type">Stadium Lighting</span>
+        <span class="project-type">
+          Stadium Lighting
+        </span>
+
         <h3>Incheon Stadium</h3>
       </div>
     </article>
+
   </div>
 </section>
 
@@ -1019,6 +1162,7 @@ footer{
   </p>
 
   <div class="contact-box">
+
     <div class="contact-card">
       <h3>TOTAL PLUS</h3>
 
@@ -1048,6 +1192,7 @@ footer{
         경기도 고양시 일산동구 고봉로702번길 125-19
       </p>
     </div>
+
   </div>
 </section>
 
@@ -1057,4 +1202,3 @@ footer{
 
 </body>
 </html>
-```
