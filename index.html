@@ -57,7 +57,7 @@ nav{
 }
 
 .menu a{
-  margin-left:48px;
+  margin-left:42px;
   font-size:15px;
   font-weight:500;
   letter-spacing:.3px;
@@ -218,27 +218,6 @@ section{
   font-size:15px;
 }
 
-.projects-strip{
-  margin-top:70px;
-  padding-top:34px;
-  border-top:1px solid rgba(255,255,255,.12);
-}
-
-.projects-strip h3{
-  color:#78aaff;
-  font-size:13px;
-  letter-spacing:2px;
-  margin-bottom:25px;
-}
-
-.project-names{
-  display:flex;
-  flex-wrap:wrap;
-  gap:18px 34px;
-  color:#ddd;
-  font-size:18px;
-}
-
 /* SOLUTIONS */
 
 .solutions{
@@ -310,16 +289,12 @@ section{
   font-size:18px;
 }
 
-/* 대표 장비 2개 */
-
 .equipment-featured{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:26px;
   margin-bottom:26px;
 }
-
-/* 하단 장비 3개 */
 
 .equipment-secondary{
   display:grid;
@@ -421,6 +396,146 @@ section{
   letter-spacing:1px;
 }
 
+/* PROJECTS */
+
+.projects{
+  background:#f3f3f1;
+  color:#111;
+}
+
+.projects .section-kicker{
+  color:#173e9c;
+}
+
+.projects-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:50px;
+  margin-bottom:60px;
+}
+
+.projects-header .section-title{
+  margin-bottom:0;
+}
+
+.projects-header .section-desc{
+  max-width:620px;
+  color:#555;
+  font-size:18px;
+}
+
+.project-featured{
+  position:relative;
+  overflow:hidden;
+  min-height:620px;
+  margin-bottom:24px;
+  background:#111;
+}
+
+.project-featured img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .7s ease;
+}
+
+.project-featured:hover img{
+  transform:scale(1.035);
+}
+
+.project-featured::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.02) 30%,
+      rgba(0,0,0,.78) 100%
+    );
+}
+
+.project-featured-content{
+  position:absolute;
+  left:50px;
+  right:50px;
+  bottom:46px;
+  z-index:2;
+  color:#fff;
+}
+
+.project-type{
+  display:block;
+  margin-bottom:13px;
+  color:#8fb0ff;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:1.7px;
+  text-transform:uppercase;
+}
+
+.project-featured h3{
+  font-size:48px;
+  line-height:1.1;
+  letter-spacing:-1.5px;
+}
+
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+}
+
+.project-card{
+  position:relative;
+  overflow:hidden;
+  min-height:420px;
+  background:#111;
+}
+
+.project-card img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .6s ease;
+}
+
+.project-card:hover img{
+  transform:scale(1.045);
+}
+
+.project-card::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.02) 34%,
+      rgba(0,0,0,.79) 100%
+    );
+}
+
+.project-card-content{
+  position:absolute;
+  left:32px;
+  right:32px;
+  bottom:30px;
+  z-index:2;
+  color:#fff;
+}
+
+.project-card h3{
+  font-size:30px;
+  line-height:1.2;
+  letter-spacing:-.7px;
+}
+
 /* CONTACT */
 
 .contact{
@@ -479,16 +594,22 @@ footer{
     grid-template-columns:repeat(2,1fr);
   }
 
-  .equipment-header{
+  .equipment-header,
+  .projects-header{
     display:block;
   }
 
-  .equipment-header .section-title{
+  .equipment-header .section-title,
+  .projects-header .section-title{
     margin-bottom:24px;
   }
 
   .equipment-secondary{
     grid-template-columns:repeat(2,1fr);
+  }
+
+  .project-featured{
+    min-height:520px;
   }
 }
 
@@ -555,6 +676,7 @@ footer{
   .cards,
   .equipment-featured,
   .equipment-secondary,
+  .project-grid,
   .contact-box{
     grid-template-columns:1fr;
   }
@@ -567,6 +689,34 @@ footer{
 
   .equipment-card.featured .equipment-info h3{
     font-size:24px;
+  }
+
+  .project-featured{
+    min-height:430px;
+  }
+
+  .project-featured-content{
+    left:25px;
+    right:25px;
+    bottom:25px;
+  }
+
+  .project-featured h3{
+    font-size:34px;
+  }
+
+  .project-card{
+    min-height:330px;
+  }
+
+  .project-card-content{
+    left:24px;
+    right:24px;
+    bottom:23px;
+  }
+
+  .project-card h3{
+    font-size:25px;
   }
 }
 </style>
@@ -584,6 +734,7 @@ footer{
     <a href="#about">회사소개</a>
     <a href="#solutions">사업분야</a>
     <a href="#equipment">장비소개</a>
+    <a href="#projects">프로젝트</a>
     <a href="#contact">문의하기</a>
   </div>
 </nav>
@@ -610,7 +761,6 @@ footer{
 
 <section class="about" id="about">
   <div class="about-grid">
-
     <div>
       <div class="section-kicker">
         ABOUT TOTAL PLUS
@@ -628,11 +778,9 @@ footer{
       극장, 공연장, 문화예술공간을 비롯해 다양한 공간에
       필요한 조명 시스템 구축을 함께합니다.
     </div>
-
   </div>
 
   <div class="stats">
-
     <div class="stat">
       <strong>2018</strong>
       <span>Established</span>
@@ -646,21 +794,6 @@ footer{
     <div class="stat">
       <strong>B2B</strong>
       <span>Professional Lighting Partner</span>
-    </div>
-
-  </div>
-
-  <div class="projects-strip">
-    <h3>SELECTED REFERENCES</h3>
-
-    <div class="project-names">
-      <span>Moulin Rouge</span>
-      <span>Mamma Mia</span>
-      <span>Beetlejuice</span>
-      <span>KBS</span>
-      <span>MBN Newsroom</span>
-      <span>Jack Nicklaus CC</span>
-      <span>Incheon Munhak Stadium</span>
     </div>
   </div>
 </section>
@@ -680,7 +813,6 @@ footer{
   </p>
 
   <div class="cards">
-
     <div class="card">
       <h3>Import</h3>
       <p>전문 무대조명 장비와 관련 시스템 수입</p>
@@ -700,14 +832,11 @@ footer{
       <h3>Technical Support</h3>
       <p>장비 운용, 유지보수, A/S 및 기술지원</p>
     </div>
-
   </div>
 </section>
 
 <section class="equipment" id="equipment">
-
   <div class="equipment-header">
-
     <div>
       <div class="section-kicker">
         EQUIPMENT
@@ -722,165 +851,157 @@ footer{
       극장과 공연장에 필요한 전문 조명 장비부터
       제어 및 전원 시스템까지 제공합니다.
     </p>
-
   </div>
 
   <div class="equipment-featured">
-
     <article class="equipment-card featured">
-
       <span class="equipment-number">01</span>
 
       <div class="equipment-image">
-        <img
-          src="equipment_vlhive151.png"
-          alt="VLHive 151 Digital FX">
+        <img src="equipment_vlhive151.png" alt="VLHive 151 Digital FX">
       </div>
 
       <div class="equipment-info">
-
-        <span class="equipment-brand">
-          VARI-LITE
-        </span>
-
-        <span class="equipment-category">
-          Moving Lights
-        </span>
-
+        <span class="equipment-brand">VARI-LITE</span>
+        <span class="equipment-category">Moving Lights</span>
         <h3>VLHive 151 Digital FX</h3>
-
         <p>
           디지털 기술을 기반으로 새로운 무대 표현을 구현하는
           차세대 엔터테인먼트 조명.
         </p>
-
       </div>
     </article>
 
     <article class="equipment-card featured">
-
       <span class="equipment-number">02</span>
 
       <div class="equipment-image">
-        <img
-          src="equipment_vl2600_profile.jpg"
-          alt="VL2600 Profile">
+        <img src="equipment_vl2600_profile.jpg" alt="VL2600 Profile">
       </div>
 
       <div class="equipment-info">
-
-        <span class="equipment-brand">
-          VARI-LITE
-        </span>
-
-        <span class="equipment-category">
-          Profile Fixtures
-        </span>
-
+        <span class="equipment-brand">VARI-LITE</span>
+        <span class="equipment-category">Profile Fixtures</span>
         <h3>VL2600 Profile</h3>
-
         <p>
           극장과 공연 환경에서 정밀한 빔 제어와
           안정적인 성능을 제공하는 프로파일 조명.
         </p>
-
       </div>
     </article>
-
   </div>
 
   <div class="equipment-secondary">
-
     <article class="equipment-card">
-
       <span class="equipment-number">03</span>
 
       <div class="equipment-image">
-        <img
-          src="equipment_neox15.png"
-          alt="NEO X15">
+        <img src="equipment_neox15.png" alt="NEO X15">
       </div>
 
       <div class="equipment-info">
-
-        <span class="equipment-brand">
-          VARI-LITE
-        </span>
-
-        <span class="equipment-category">
-          Lighting Control
-        </span>
-
+        <span class="equipment-brand">VARI-LITE</span>
+        <span class="equipment-category">Lighting Control</span>
         <h3>NEO X15</h3>
-
-        <p>
-          공연 제작과 시스템 운용을 위한
-          전문 조명 제어 콘솔.
-        </p>
-
+        <p>공연 제작과 시스템 운용을 위한 전문 조명 제어 콘솔.</p>
       </div>
     </article>
 
     <article class="equipment-card">
-
       <span class="equipment-number">04</span>
 
       <div class="equipment-image">
-        <img
-          src="equipment_rigrack_processor.png"
-          alt="RigRack Processor">
+        <img src="equipment_rigrack_processor.png" alt="RigRack Processor">
       </div>
 
       <div class="equipment-info">
-
-        <span class="equipment-brand">
-          VARI-LITE
-        </span>
-
-        <span class="equipment-category">
-          Power Systems
-        </span>
-
+        <span class="equipment-brand">VARI-LITE</span>
+        <span class="equipment-category">Power Systems</span>
         <h3>RigRack Processor</h3>
-
-        <p>
-          전원 시스템을 통합 제어하고
-          안정적인 운용을 지원하는 프로세서.
-        </p>
-
+        <p>전원 시스템을 통합 제어하고 안정적인 운용을 지원하는 프로세서.</p>
       </div>
     </article>
 
     <article class="equipment-card">
-
       <span class="equipment-number">05</span>
 
       <div class="equipment-image">
-        <img
-          src="equipment_vl2600_upgradekit.png"
-          alt="VL2600 SE Engine Upgrade Kit">
+        <img src="equipment_vl2600_upgradekit.png" alt="VL2600 SE Engine Upgrade Kit">
       </div>
 
       <div class="equipment-info">
-
-        <span class="equipment-brand">
-          VARI-LITE
-        </span>
-
-        <span class="equipment-category">
-          Upgrade Solutions
-        </span>
-
+        <span class="equipment-brand">VARI-LITE</span>
+        <span class="equipment-category">Upgrade Solutions</span>
         <h3>VL2600 SE Engine Upgrade Kit</h3>
+        <p>기존 장비의 성능과 효율을 향상시키는 엔진 업그레이드 솔루션.</p>
+      </div>
+    </article>
+  </div>
+</section>
 
-        <p>
-          기존 장비의 성능과 효율을 향상시키는
-          엔진 업그레이드 솔루션.
-        </p>
+<section class="projects" id="projects">
+  <div class="projects-header">
+    <div>
+      <div class="section-kicker">
+        SELECTED PROJECTS
+      </div>
 
+      <h2 class="section-title">
+        프로젝트
+      </h2>
+    </div>
+
+    <p class="section-desc">
+      공연, 문화예술공간, 경기장 등 다양한 현장에
+      전문 조명 장비와 시스템을 공급해왔습니다.
+    </p>
+  </div>
+
+  <article class="project-featured">
+    <img src="project_moulin_rouge.png" alt="뮤지컬 물랑루즈">
+
+    <div class="project-featured-content">
+      <span class="project-type">Musical</span>
+      <h3>Moulin Rouge</h3>
+    </div>
+  </article>
+
+  <div class="project-grid">
+    <article class="project-card">
+      <img src="project_mamma_mia.png" alt="뮤지컬 맘마미아">
+
+      <div class="project-card-content">
+        <span class="project-type">Musical</span>
+        <h3>Mamma Mia!</h3>
       </div>
     </article>
 
+    <article class="project-card">
+      <img src="project_betel_geuse.png" alt="뮤지컬 비틀쥬스">
+
+      <div class="project-card-content">
+        <span class="project-type">Musical</span>
+        <h3>Beetlejuice</h3>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <img src="project_shinsegae_xscala.png" alt="신세계 엑스칼라 공연장">
+
+      <div class="project-card-content">
+        <span class="project-type">Performance Venue</span>
+        <h3>Shinsegae X Scala</h3>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <img src="project_incheon_stadium.png" alt="인천 경기장 조명 프로젝트">
+
+      <div class="project-card-content">
+        <span class="project-type">Stadium Lighting</span>
+        <h3>Incheon Stadium</h3>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -899,7 +1020,6 @@ footer{
   </p>
 
   <div class="contact-box">
-
     <div class="contact-card">
       <h3>TOTAL PLUS</h3>
 
@@ -929,7 +1049,6 @@ footer{
         경기도 고양시 일산동구 고봉로702번길 125-19
       </p>
     </div>
-
   </div>
 </section>
 
@@ -940,4 +1059,3 @@ footer{
 </body>
 </html>
 ```
-
