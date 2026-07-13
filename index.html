@@ -5,7 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>TOTAL PLUS | Professional Lighting Solutions</title>
+  
+<meta name="description" content="토탈플러스는 극장, 공연장, 문화예술공간을 위한 전문 조명 장비 수입·공급·설치·기술지원 기업입니다.">
 
+<meta property="og:type" content="website">
+<meta property="og:title" content="TOTAL PLUS | Professional Lighting Solutions">
+<meta property="og:description" content="극장 · 공연장 · 문화예술공간을 위한 전문 조명 시스템">
+<meta property="og:url" content="https://totalplus.github.io/total-plus/">
+<meta property="og:image" content="https://totalplus.github.io/total-plus/hero.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TOTAL PLUS | Professional Lighting Solutions">
+<meta name="twitter:description" content="극장 · 공연장 · 문화예술공간을 위한 전문 조명 시스템">
+<meta name="twitter:image" content="https://totalplus.github.io/total-plus/hero.png">
+  
 <style>
 *{
   margin:0;
@@ -111,6 +124,10 @@ nav{
   margin-bottom:42px;
   line-height:1.55;
   text-shadow:0 2px 12px rgba(0,0,0,.65);
+}
+
+  .mobile-break{
+  display:none;
 }
 
 .btns{
@@ -237,10 +254,10 @@ section{
   gap:22px;
   margin-top:58px;
 }
-
 .card{
-  min-height:230px;
-  padding:36px;
+  position:relative;
+  min-height:250px;
+  padding:34px;
   background:#f5f5f5;
   border:1px solid #e5e5e5;
   transition:.25s;
@@ -251,15 +268,34 @@ section{
   border-color:#173e9c;
 }
 
+.card-number{
+  position:absolute;
+  top:28px;
+  right:28px;
+  color:#d2d2d2;
+  font-size:34px;
+  font-weight:800;
+}
+
+.card-label{
+  display:block;
+  margin-bottom:42px;
+  color:#173e9c;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+
 .card h3{
-  font-size:27px;
+  font-size:29px;
   margin-bottom:18px;
 }
 
 .card p{
   color:#555;
   font-size:16px;
-  line-height:1.65;
+  line-height:1.75;
+  word-break:keep-all;
 }
 
 /* FEATURED PRODUCTS */
@@ -614,26 +650,40 @@ footer{
 /* MOBILE */
 
 @media(max-width:760px){
-  nav{
-    padding:18px 22px;
-    display:block;
-  }
 
-  .logo img{
-    height:37px;
-  }
+  .card{
+  min-height:auto;
+  padding:30px;
+}
 
-  .menu{
-    margin-top:16px;
-    gap:15px;
-    flex-wrap:wrap;
-  }
+.card-label{
+  margin-bottom:32px;
+}
+  
+nav{
+  padding:20px 22px 22px;
+  display:block;
+}
 
-  .menu a{
-    margin-left:0;
-    font-size:12px;
-  }
+.logo img{
+  height:37px;
+}
 
+.menu{
+  margin-top:18px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px 10px;
+  width:100%;
+}
+
+.menu a{
+  margin-left:0;
+  font-size:13px;
+  text-align:center;
+  white-space:nowrap;
+}
+  
   .hero{
     min-height:700px;
     padding:120px 24px 40px;
@@ -644,8 +694,15 @@ footer{
     letter-spacing:-2px;
   }
 
-  .hero p{
-    font-size:18px;
+.hero p{
+  font-size:18px;
+  line-height:1.65;
+  word-break:keep-all;
+}
+
+.mobile-break{
+  display:block;
+}
   }
 
   .btns{
@@ -741,9 +798,11 @@ footer{
   <div class="hero-content">
     <h1>Professional<br>Lighting Solutions</h1>
 
-    <p>
-      극장 · 공연장 · 문화예술공간을 위한 전문 조명 시스템
-    </p>
+  <p>
+  극장 · 공연장 · 문화예술공간을 위한
+  <br class="mobile-break">
+  전문 조명 시스템
+</p>
 
     <div class="btns">
       <a href="#solutions" class="btn btn-primary">
@@ -811,39 +870,41 @@ footer{
   </p>
 
   <div class="cards">
-    <div class="card">
-      <h3>Import</h3>
-      <p>전문 무대조명 장비와 관련 시스템 수입</p>
-    </div>
+<div class="card">
+  <span class="card-number">01</span>
+  <span class="card-label">장비 수입</span>
+  <h3>Import</h3>
+  <p>
+    전문 무대조명 장비와 관련 시스템을 국내에 공급합니다.
+  </p>
+</div>
 
-    <div class="card">
-      <h3>Supply</h3>
-      <p>극장, 공연장, 문화예술공간의 조명 장비 공급</p>
-    </div>
+<div class="card">
+  <span class="card-number">02</span>
+  <span class="card-label">제품 공급</span>
+  <h3>Supply</h3>
+  <p>
+    극장, 공연장, 문화예술공간에 필요한 장비를 제안하고 공급합니다.
+  </p>
+</div>
 
-    <div class="card">
-      <h3>Installation</h3>
-      <p>현장 환경에 맞춘 조명기기 설치 및 시스템 구축</p>
-    </div>
+<div class="card">
+  <span class="card-number">03</span>
+  <span class="card-label">설치·구축</span>
+  <h3>Installation</h3>
+  <p>
+    현장 환경에 맞춰 조명기기를 설치하고 시스템을 구축합니다.
+  </p>
+</div>
 
-    <div class="card">
-      <h3>Technical Support</h3>
-      <p>장비 운용, 유지보수, A/S 및 기술지원</p>
-    </div>
-  </div>
-</section>
-
-<section class="equipment" id="equipment">
-
-  <div class="equipment-header">
-    <div>
-      <div class="section-kicker">
-        FEATURED PRODUCTS
-      </div>
-
-      <h2 class="section-title">
-        대표 제품
-      </h2>
+<div class="card">
+  <span class="card-number">04</span>
+  <span class="card-label">기술지원</span>
+  <h3>Technical Support</h3>
+  <p>
+    장비 운용, 유지보수, A/S 및 현장 기술지원을 제공합니다.
+  </p>
+</div>
     </div>
 
     <p class="section-desc">
